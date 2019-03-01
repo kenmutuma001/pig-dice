@@ -1,20 +1,25 @@
 .Rules {
-  float: right;
+  float: none;
   text : blue;
   font-size: 15px;
   font-weight: 600;
-  margin-top: -90px;
+  margin-top: -680px;
   margin-left: 800px;
   margin-right: 20px;
   margin: black;
   background-color: ;
   padding-bottom: 335px;
+  background-image: url(https://images.wallpaperscraft.com/image/dice_game_red_white_glass_95_1280x720.jpg);
 }
 .h-one{
   text-align: center;
+  text-decoration-color: blue;
+  padding-bottom: 50px;
+    background-image: url(https://images.wallpaperscraft.com/image/dice_game_red_white_glass_95_1280x720.jpg);
+  padding-top: 20px;
 }
 .game {
-  background-color: black;
+  background-color: ;
   padding-top: 300px;
   text-align: top;
 
@@ -33,9 +38,42 @@
 
 }
 .img {
-  margin-right: 700px;
+  margin-right: 900px;
   background-color: ;
   margin-left: 30px;
+  padding-bottom: 80px;
+  float: none;
 
 
+}
+.bplay {
+  width: 80px;
+  height: 40px;
+  margin-top: 30px;
+}
+.play {
+  background-color: ;
+  margin-right: 1100px;
+  margin-left: 30px;
+}
+.bhold {
+  margin-top: 30px;
+  height: 40px;
+  width: 60px;
+  color: black;
+background: #eb94d0;
+}
+.broll{
+  margin-top: 30px;
+  height: 40px;
+  width: 60px;
+
+ background: #eb94d0;
+}
+.score {
+  background-color:  ;
+  margin-left: 385px;
+  margin-right: 485px;
+  margin-top: -500px;
+  float:none;
 }
