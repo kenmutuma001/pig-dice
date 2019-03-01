@@ -1,20 +1,41 @@
-.vertical-menu {
-  width: 200px; /* Set a width if you like */
+.Rules {
+  float: right;
+  text : blue;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: -90px;
+  margin-left: 800px;
+  margin-right: 20px;
+  margin: black;
+  background-color: ;
+  padding-bottom: 335px;
 }
-
-.vertical-menu a {
-  background-color: #eee; /* Grey background color */
-  color: black; /* Black text color */
-  display: block; /* Make the links appear below each other */
-  padding: 12px; /* Add some padding */
-  text-decoration: none; /* Remove underline from links */
+.h-one{
+  text-align: center;
 }
+.game {
+  background-color: black;
+  padding-top: 300px;
+  text-align: top;
 
-.vertical-menu a:hover {
-  background-color: #ccc; /* Dark grey background on mouse-over */
 }
+.img1 {
+  width: 100px;
+  height: 100px;
+}
+.img2 {
+  width: 100px;
+  height: 100px;
+}
+.body {
+  background-color: ;
+  padding-bottom: 450px;
 
-.vertical-menu a.active {
-  background-color: #4CAF50; /* Add a green color to the "active/current" link */
-  color: white;
+}
+.img {
+  margin-right: 700px;
+  background-color: ;
+  margin-left: 30px;
+
+
 }
