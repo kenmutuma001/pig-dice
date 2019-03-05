@@ -1,58 +1,71 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Pig-dice game</title>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scripts.js"></script>
-  </head>
-  <div class="body">
+
+<head>
+  <meta charset="utf-8">
+  <title>Pig-dice game</title>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+<div class="body">
+
   <body>
-    <div class="h-one">
-    <h1 >PIG-DICE<h1>
-    </div>
+    <div class="menu">
+      <div class="h-one">
+        <h1>PIG-DICE<h1>
+      </div>
       <div class="img">
-           <img class="img1" src="img/player.gif">
-           <input type="text" name="p1" placeholder="PLAYER 1" id="p1">
-           <p>Dice count: <span id="diece_count1"></span><p>
-           <p>Round Total: <span id="roundTotal1"></span></p>
-           <p>Total Score: <span id="total_score1"></span></p>
+        <img class="img1" src="img/player.gif">
+        <label for="p1">Player 1 Name:</label>
+        <input required class="p1" type="text" id="name_one"><br>
+        <button id="play_play" class="bplay">PLAY</button><br>
+        <div class="buttons">
+          <button id="play_roll1" class="broll">Roll</button><br>
+          <button id="play_pass1" class="bpass">Pass</button><br>
+          <p>Dice count: <span id="diece_count1"></span> </p>
+          <p>Round Total: <span id="roundTotal1"></span></p>
+          <p>Total Score: <span id="total_score1"></span></p>
+        </div>
 
 
       </div>
+      <div class="buttons">
       <div class="play">
-           <button class="bplay" type="submit" name="play">PLAY</button><br>
-           <button class="broll" type="submit" name="Roll">Roll</button><br>
-           <button class="bhold" type="submit" name="Hold">Pass</button><br>
-           <h2>winner: <span id="winner"></span></h2>
+
+        <button id="new_game" class="ngame">New Game</button><br>
+      </div>
+        <h2><span id="winner"></span></h2>
 
       </div>
       <div class="score">
         <img class="img2" src="img/player.gif">
-        <input  type="text" name="p2" placeholder="PLAYER 2" id="p2">
-        <p>Dice count: <span id="diece_count2"></span><p>
-        <p>Round Total: <span id="roundTotal2"></span></p>
-        <p>Total Score: <span id="total_score2"></span></p>
-         </div>
-
-      </div>
-      <div class="Rules">
-        <h2>RULES</h2>
-        This is a dice rolling game whereby two players compete on reaching 100 points.<br>The first to reach 100 points wins the game:-
-        <ul>
-          <li>If one rolls the dice and gets  1 they pass the turn to the other player</li>
-          <li>If one gets another value other than 1 they can decide to continue playing or pass to the next player.<br>For instance they decide to continue playing and get a 1 then all points collected <em><strong>during that play will</strong></em> be lost. </li>
-
-        </ul>
+        <label for="p2">Player 2 Name:</label>
+        <input required class="p2" type="text" id="name_two"><br>
+        <div class="buttons">
+          <button id="play_roll2" class="broll">Roll</button><br>
+          <button id="play_pass2" class="bhold">Pass</button><br>
+          <p>Dice count: <span id="diece_count2"></span>
+          </p>
+          <p>Round Total: <span id="roundTotal2"></span></p>
+          <p>Total Score: <span id="total_score2"></span></p>
+        </div>
       </div>
 
-
-
-
-
-
-  </body>
+    </div>
+    <div class="Rules">
+      <h2>RULES</h2>
+      This is a dice rolling game whereby two players compete on reaching 100 points.<br>The first to reach 100 points wins the game:-
+      <ul>
+        <li>If one rolls the dice and gets 1 they pass the turn to the other player</li>
+        <li>If one gets another value other than 1 they can decide to continue playing or pass to the next player.<br>For instance they decide to continue playing and get a 1 then all points collected <em><strong>during that play will</strong></em>
+          be
+          lost. </li>
+      </ul>
+    </div>
 </div>
+</body>
+</div>
+
 </html>

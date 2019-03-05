@@ -44,7 +44,6 @@
   padding-bottom: 80px;
   float: none;
 
-
 }
 .bplay {
   width: 80px;
@@ -76,4 +75,9 @@ background: #eb94d0;
   margin-right: 485px;
   margin-top: -500px;
   float:none;
+}
+.menu {
+  background-color: black;
+  background-image: url(http://www.animatedimages.org/data/media/710/animated-dice-image-0103.gif);
+  padding-bottom: 300px;
 }

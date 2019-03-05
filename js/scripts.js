@@ -6,150 +6,123 @@
 // first player to reach 100 points wins
 
 
+var player1 = "";
+var player2 = "";
 
-var player1="";
-var player2="";
-
-
-var rollDice = function () {
-
-
-return Math.floor(6*Math.random())+1;
+var rollDice = function() {
+  return Math.floor(6 * Math.random()) + 1;
 }
-
 
 function Player(turn) {
-this.roll = 0;
-this.tempscore = 0;
-this.totalscore = 0;
-this.turn = turn;
-this.playerName;
+  this.roll = 0;
+  this.tempscore = 0;
+  this.totalscore = 0;
+  this.turn = turn;
+  this.playerName;
 }
-
 
 // checking for roll of 1 //
 
 
 Player.prototype.rollone = function() {
-if (this.roll === 1) {
-this.tempscore = 0;
-alert("Sorry " + this.playerName + ", you rolled a 1! Your turn is over!")
+  if (this.roll === 1) {
+    this.tempscore = 0;
+    alert("Ooh" + this.playerName + ",next player please!")
+  } else {
+    this.tempscore += this.roll;
+  }
 }
-else {
-this.tempscore += this.roll;
- }
-}
-
 
 // hold - to tally your rolls to the total and allow next player to play//
 
 
-Player.prototype.hold = function () {
-this.totalscore += this.tempscore;
-this.tempscore = 0;
-
+Player.prototype.pass = function() {
+  this.totalscore += this.tempscore;
+  this.tempscore = 0;
 
 }
 
 
-// check for 100 - The first player to reach 100 wins!//
-
-
-
-Player.prototype.winnerCheck = function () {
-
-if (this.totalscore >= 100) {
-
-alert("Congratulations," + this.playerName + " You WON!");
+Player.prototype.winnerCheck = function() {
+  if (this.totalscore >= 100) {
+    alert("Congratulations," + this.playerName + " You WON!");
+  }
 }
 
-
-//Refresh just the game and not the players names//
-Player.prototype.newGame = function () {
-this.roll = 0;
-this.tempscore = 0;
-this.totalscore = 0;
-this.playerName ="";
+//new game//
+Player.prototype.newGame = function() {
+  this.roll = 0;
+  this.tempscore = 0;
+  this.totalscore = 0;
+  this.playerName = "";
 }
 
-
-var clearValues = function(){
+var clearValues = function() {
   $(".p1").val("");
   $(".p2").val("");
 }
+
 //User Interface//
 $(document).ready(function() {
-$(".console").hide();
-$("button#play_roll").click(function(event){
+  $(".buttons").hide();
+  $("button#play_play").click(function(event) {
+    player1 = new Player(true);
+    player2 = new Player(false);
+    $(".buttons").show();
 
-player1 = new Player(true);
-player2 = new Player(false);
-$(".console").show();
+    var p1 = $(".p1").val();
+    $("#p1").text(p1);
 
-var p1name = $(".p1").val();
-$("#p1").text(p2);
+    var p2 = $(".p2").val();
+    $("#p2").text(p2);
 
-var p2name = $(".p2").val();
-$("#p2").text(p2);
+    player1.playerName = p1;
+    player2.playerName = p2;
 
-player1.playerName=p1;
-player2.playerName=p2;
+  });
+  $("button#new_game").click(function(event) {
+    $(".buttons").hide();
+    clearValues();
+    player1.newGame();
+    player2.newGame();
+    $("#roundTotal1").empty();
+    $("#total_score1").empty();
+    $("#diece_count1").empty();
+    $("#roundTotal2").empty();
+    $("#total_score2").empty();
+    $("#diece_count2").empty();
 
-});
-$("button#new_game").click(function(event){
-$(".console").hide();
-clearValues();
-player1.newGame();
-player2.newGame();
-$("#roundTotal1").empty();
-$("#total_score-1").empty();
-$("#dice_count1").empty();
-$("#roundTotal2").empty();
-$("#total_score2").empty();
-$("#dice_count1").empty();
+    $(".menu").show();
+  });
 
+  $("button#play_roll1").click(function(event) {
+    player1.roll = rollDice();
+    $("#diece_count1").text(player1.roll);
+    player1.rollone();
+    $("#roundTotal1").text(player1.tempscore);
+  });
 
+  $("button#play_roll2").click(function(event) {
+    player2.roll = rollDice();
+    $("#diece_count2").text(player2.roll);
+    player2.rollone();
+    $("#roundTotal2").text(player2.tempscore);
+  });
 
-$(".menu").show();
-});
+  $("button#play_pass1").click(function(event) {
+    player1.hold();
+    $("#total_score1").text(player1.totalscore);
+    $("#roundTotal1").empty();
+    $("#diece_count1").empty();
+    player1.winnerCheck();
+  });
 
+  $("button#play_pass2").click(function(event) {
+    player2.hold();
+    $("#total_score2").text(player2.totalscore);
+    $("#roundTotal2").empty();
+    $("#diece_count2").empty();
+    player2.winnerCheck();
+  });
 
-$("button#player1-roll").click(function(event){
-player1.roll = rollDice();
-$("#die-roll-1").text(player1.roll);
-player1.rollone();
-
-
-$("#roundTotal-1").text(player1.tempscore);
-});
-
-
-$("button#player2-roll").click(function(event){
-player2.roll = rollDice();
-$("#die-roll-2").text(player2.roll);
-player2.rollone();
-
-
-$("#roundTotal-2").text(player2.tempscore);
-});
-
-
-$("button#player1-hold").click(function(event){
-player1.hold();
-$("#total-score-1").text(player1.totalscore);
-$("#roundTotal-1").empty();
-$("#die-roll-1").empty();
-
-
-player1.winnerCheck();
-});
-
-
-$("button#player2-hold").click(function(event){
-player2.hold();
-$("#total-score-2").text(player2.totalscore);
-$("#roundTotal-2").empty();
-$("#die-roll-2").empty();
-player2.winnerCheck();
- });
 });
