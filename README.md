@@ -17,15 +17,15 @@ The technologies used are:-
 ## SETUP/INSTALLATION REQUIREMENTS
 As long as you have a working browser it is compatible.
 ## BEHAVIOUR DRIVEN DEVELOPMENTS
-|-------------------------------------------------------------|-----------------------------------------------|
+
 |BEHAVIOUR                                                    |SPECIFICATION                                  |  
 |-------------------------------------------------------------|-----------------------------------------------|
 | 1. The two players can enter their names                    |Their names will be displayed on the console.  |
-|-------------------------------------------------------------|-----------------------------------------------|
-| 2. Player one gets first chance to play                     |Their dice roll count is displayed and if not a| |                                                             |They can choose to roll or pass.               |
-|-------------------------------------------------------------|-----------------------------------------------|
+|             |                                                       |
+| 2. Player one gets first chance to play                     |Their dice roll count is displayed and if not a they can choose to roll or pass.  |
+|                        |                                       |
 | 3. Winner                                                   |First to reach 100 points wins the game.       |
-|-------------------------------------------------------------|-----------------------------------------------|
+|                                                      |                               |
 
 ## KNOWN BUGS
 There are no known bugs if any is found please make contact.

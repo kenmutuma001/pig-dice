@@ -27,7 +27,7 @@ function Player(turn) {
 Player.prototype.rollone = function() {
   if (this.roll === 1) {
     this.tempscore = 0;
-    alert("Ooh" + this.playerName + ",next player please!")
+    alert("Ooh " + this.playerName + ",next player please!")
   } else {
     this.tempscore += this.roll;
   }

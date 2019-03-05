@@ -2,13 +2,14 @@
   text : blue;
   font-size: 15px;
   font-weight: 600;
-  margin-top: -680px;
+  margin-top: -920px;
   margin-left: 800px;
-  margin-right: 20px;
+  margin-right: px;
   margin: black;
   background-color: ;
   padding-bottom: 335px;
   background-image: url(https://images.wallpaperscraft.com/image/dice_game_red_white_glass_95_1280x720.jpg);
+  position:absolute;
 }
 .h-one{
   text-align: center;
@@ -41,6 +42,7 @@
   background-color: ;
   margin-left: 30px;
   padding-bottom: 80px;
+  position:absolute;
 
 
 }
@@ -50,16 +52,15 @@
   margin-top: 31px;
 }
 .play {
-  background-color: ;
   margin-right: 1100px;
   margin-left: 30px;
+  position:absolute;
 }
 .bhold {
   margin-top: 30px;
   height: 40px;
   width: 60px;
   color: black;
-background: rgba(60,179,113);
 }
 .broll{
   margin-top: 30px;
@@ -67,10 +68,9 @@ background: rgba(60,179,113);
   width: 60px;
 }
 .score {
-  background-color:  ;
   margin-left: 385px;
   margin-right: 485px;
-  margin-top: -500px;
+  position:absolute;
 }
 .menu {
   background-color: black;
@@ -78,6 +78,6 @@ background: rgba(60,179,113);
   padding-bottom: 300px;
   color: red;
   height:900px;
-  width:1000px;
+  width:1300px;
   font-size: 20px;
 }
