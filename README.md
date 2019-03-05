@@ -25,7 +25,7 @@ As long as you have a working browser it is compatible.
 | 2. Player one gets first chance to play                     |Their dice roll count is displayed and if not a they can choose to roll or pass.  |
 |                        |                                       |
 | 3. Winner                                                   |First to reach 100 points wins the game.       |
-|                                                      |                               |
+|                                                       |                               |
 
 ## KNOWN BUGS
 There are no known bugs if any is found please make contact.
