@@ -33,15 +33,10 @@ Player.prototype.rollone = function() {
   }
 }
 
-// hold - to tally your rolls to the total and allow next player to play//
-
-
 Player.prototype.pass = function() {
   this.totalscore += this.tempscore;
   this.tempscore = 0;
-
 }
-
 
 Player.prototype.winnerCheck = function() {
   if (this.totalscore >= 100) {
