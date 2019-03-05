@@ -20,7 +20,7 @@ As long as you have a working browser it is compatible.
 |-------------------------------------------------------------|-----------------------------------------------|
 |BEHAVIOUR                                                    |SPECIFICATION                                  |  
 |-------------------------------------------------------------|-----------------------------------------------|
-| 1. The two players can enter their names                    |Their names will be displayed on the console   |
+| 1. The two players can enter their names                    |Their names will be displayed on the console.  |
 |-------------------------------------------------------------|-----------------------------------------------|
 | 2. Player one gets first chance to play                     |Their dice roll count is displayed and if not a| |                                                             |They can choose to roll or pass.               |
 |-------------------------------------------------------------|-----------------------------------------------|
